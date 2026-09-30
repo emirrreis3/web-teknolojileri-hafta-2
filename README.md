@@ -2,7 +2,7 @@
 
 **Öğrenci Adı Soyadı:** Emir Demir  
 **Öğrenci Numarası:** 2416501048  
-**Canlı Site:** [Vercel Canlı Önizleme](web-teknolojileri-hafta-2.vercel.app) *(Kendi Vercel adresinizi yazın)*
+**Canlı Site:** [Vercel Canlı Önizleme](web-teknolojileri-hafta-2.vercel.app) *
 
 ---
 
