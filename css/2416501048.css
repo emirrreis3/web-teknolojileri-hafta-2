@@ -1,0 +1,224 @@
+/* Emir Demir — 2416501048 */
+
+:root {
+  --no: 2416501048;
+  --ton: 328;
+  --renk-ana: hsl(var(--ton) 65% 38%);
+  --renk-zemin: hsl(var(--ton) 30% 97%);
+  --font: system-ui, sans-serif;
+  --bosluk-m: 1rem; 
+  --kose: 8px;
+  
+  --renk-metin: #222222;
+  --renk-kart: #ffffff;
+  --renk-hata: #d32f2f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: var(--font); 
+  background-color: #e2e8f0;
+  color: var(--renk-metin);
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Telefon ekranı çerçevesi */
+.uygulama-cercevesi {
+  background-color: var(--renk-zemin);
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: var(--kose);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding-bottom: var(--bosluk-m);
+}
+
+/* === HEADER VE MENÜ === */
+header {
+  background-color: var(--renk-ana);
+  padding: var(--bosluk-m);
+  margin-bottom: var(--bosluk-m);
+}
+
+header h1 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.35rem;
+  color: #ffffff !important;
+}
+
+/* Tek ve Temiz Menü */
+nav.nav-menu {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Link Renklerinin Mor/Mavi Olmasını Engelleme (Her Durumda BEYAZ) */
+nav.nav-menu a,
+nav.nav-menu a:link,
+nav.nav-menu a:visited,
+nav.nav-menu a:hover,
+nav.nav-menu a:active {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+nav.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+nav.nav-menu .ayrac {
+  margin: 0 0.25rem;
+  opacity: 0.9;
+}
+
+/* Ana İçerik Alanı */
+main {
+  padding: 0 var(--bosluk-m);
+}
+
+p.aciklama {
+  margin: 0 0 var(--bosluk-m) 0;
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.6rem 0;
+  font-weight: bold;
+}
+
+/* === KARTLAR === */
+section.etkinlik-listesi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: var(--bosluk-m);
+}
+
+article.kart {
+  background-color: var(--renk-kart);
+  border: 1px solid #d1d5db;
+  border-radius: var(--kose);
+  padding: 0.75rem;
+}
+
+article.kart h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #111827;
+}
+
+article.kart p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+a.sayfa-link {
+  color: var(--renk-ana);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+/* === ETKİNLİK DETAY === */
+.afis-kutusu {
+  background-color: #d1fae5; /* Yeşilimsi afiş zemin efekti */
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-radius: var(--kose);
+  margin-bottom: var(--bosluk-m);
+  color: #065f46;
+  font-size: 0.95rem;
+}
+
+dl.detay-bilgi {
+  margin: 0 0 var(--bosluk-m) 0;
+  font-size: 0.9rem;
+}
+
+dl.detay-bilgi dt {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+dl.detay-bilgi dd {
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+/* === FORMLAR === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #1f2937;
+}
+
+input, select, textarea {
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+/* Kırmızı Hatalı Alan (etkinlik-ekle.html için) */
+input.hatali-input {
+  border-color: var(--renk-hata) !important;
+  color: var(--renk-hata) !important;
+}
+
+input.hatali-input::placeholder {
+  color: var(--renk-hata);
+}
+
+button.form-buton {
+  background-color: var(--renk-ana);
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem;
+  border-radius: var(--kose);
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 0.25rem;
+  width: 100%;
+}
+
+/* Masaüstü Düzeni (600px üzeri) */
+@media (min-width: 600px) {
+  .uygulama-cercevesi {
+    max-width: 750px;
+  }
+  
+  nav.nav-menu .mobil-br {
+    display: none; /* Bilgisayarda menü alt satıra geçmesin */
+  }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  /* Masaüstünde 4 menü elemanının da arasında nokta görünür, telefonda alt satıra geçince aradaki nokta gizlenir */
+@media (max-width: 599px) {
+  .masaustu-ayrac {
+    display: none;
+  }
+}
+}
